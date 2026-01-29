@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Re.Gu.Ma design | 3D Recycling Startup</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --petrolio: #2d5a6e; /* Dal vostro logo */
+            --arancio: #d36d41;  /* Dal vostro logo */
+            --bg: #f9f7f2;       /* Sfondo carta riciclata */
+            --text: #1a1a1a;
+        }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            margin: 0; 
+            background-color: var(--bg); 
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* HEADER & LOGO */
+        header { 
+            background: white; 
+            padding: 3rem 1rem; 
+            text-align: center; 
+            border-bottom: 4px solid var(--petrolio);
+        }
+        header img { 
+            max-width: 300px; 
+            height: auto; 
+        }
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--petrolio);
+            font-weight: 300;
+            margin-top: 10px;
+        }
+
+        /* NAVIGAZIONE */
+        nav { 
+            position: sticky; 
+            top: 0; 
+            background: rgba(255,255,255,0.95); 
+            padding: 1rem; 
+            text-align: center; 
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        nav a { 
+            margin: 0 10px; 
+            text-decoration: none; 
+            color: var(--text); 
+            font-weight: 600; 
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+        nav a:hover { color: var(--arancio); }
+
+        /* SEZIONI PRODOTTI */
+        .container { 
+            max-width: 1100px; 
+            margin: auto; 
+            padding: 2rem; 
+        }
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 30px; 
+            margin-top: 2rem;
+        }
+
+        .card { 
+            background: white; 
+            border-radius: 15px; 
+            overflow: hidden; 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .card:hover { transform: translateY(-10px); }
+        .card img { 
+            width: 100%; 
+            height: 250px; 
+            object-fit: cover; 
+            background: #eee;
+        }
+        .card-content { padding: 1.5rem; text-align: center; flex-grow: 1; }
+        .card h3 { color: var(--petrolio); margin-bottom: 0.5rem; }
+        .card p { font-size: 0.9rem; color: #666; margin-bottom: 1.5rem; }
+
+        /* BOTTONE STRIPE */
+        .btn { 
+            background: var(--arancio); 
+            color: white; 
+            padding: 12px 25px; 
+            text-decoration: none; 
+            border-radius: 50px; 
+            font-weight: bold;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+        .btn:hover { background: var(--petrolio); }
+
+        /* NEWSLETTER */
+        .newsletter { 
+            background: var(--petrolio); 
+            color: white; 
+            padding: 4rem 1rem; 
+            text-align: center; 
+            margin-top: 4rem;
+        }
+        .newsletter input { 
+            padding: 12px; 
+            width: 100%; 
+            max-width: 300px; 
+            border: none; 
+            border-radius: 5px; 
+            margin: 10px;
+        }
+
+        footer { 
+            padding: 2rem; 
+            text-align: center; 
+            font-size: 0.8rem; 
+            color: #888;
+        }
+
+        @media (max-width: 600px) {
+            nav a { display: block; margin: 10px 0; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo.png" alt="Re.Gu.Ma design Logo">
+    <div class="tagline">Trasformiamo plastica riciclata in design unico | Palermo</div>
+</header>
+
+<nav>
+    <a href="#ufficio">Ufficio</a>
+    <a href="#gioielli">Gioielli</a>
+    <a href="#gaming">Gaming</a>
+    <a href="#auto">Auto</a>
+    <a href="#elettronica">Elettronica</a>
+    <a href="#casa">Casa</a>
+</nav>
+
+<div class="container">
+    <h2 style="text-align: center;">Le nostre Collezioni su Commissione</h2>
+    <div class="grid">
+        
+        <div class="card" id="ufficio">
+            <img src="https://via.placeholder.com/400x300?text=Ufficio" alt="Ufficio">
+            <div class="card-content">
+                <h3>Ufficio</h3>
+                <p>Organizer, porta penne e supporti per laptop in plastica riciclata.</p>
+                <a href="INSERISCI_LINK_STRIPE" class="btn">Richiedi Commissione</a>
+            </div>
+        </div>
+
+        <div class="card" id="gioielli">
+            <img src="https://via.placeholder.com/400x300?text=Gioielli" alt="Gioielli">
+            <div class="card-content">
+                <h3>Gioielli</h3>
+                <p>Orecchini e accessori geometrici stampati in 3D.</p>
+                <a href="INSERISCI_LINK_STRIPE" class="btn">Scegli Modello</a>
+            </div>
+        </div>
+
+        <div class="card" id="gaming">
+            <img src="https://via.placeholder.com/400x300?text=Gaming" alt="Gaming">
+            <div class="card-content">
+                <h3>Gaming</h3>
+                <p>Supporti per controller e accessori per la tua postazione.</p>
+                <a href="INSERISCI_LINK_STRIPE" class="btn">Ordina Ora</a>
+            </div>
+        </div>
+
+        <div class="card" id="auto">
+            <img src="https://via.placeholder.com/400x300?text=Auto" alt="Auto">
+            <div class="card-content">
+                <h3>Auto</h3>
+                <p>Accessori interni e parti personalizzate.</p>
+                <a href="INSERISCI_LINK_STRIPE" class="btn">Personalizza</a>
+            </div>
+        </div>
+
+        <div class="card" id="elettronica">
+            <img src="https://via.placeholder.com/400x300?text=Elettronica" alt="Elettronica">
+            <div class="card-content">
+                <h3>Elettronica</h3>
+                <p>Cover e stand per i tuoi dispositivi tech.</p>
+                <a href="INSERISCI_LINK_STRIPE" class="btn">Dettagli</a>
+            </div>
+        </div>
+
+        <div class="card" id="casa">
+            <img src="https://via.placeholder.com/400x300?text=Casa" alt="Casa">
+            <div class="card-content">
+                <h3>Casa</h3>
+                <p>Vasi, lampade e oggettistica per un arredamento sostenibile.</p>
+                <a href="INSERISCI_LINK_STRIPE" class="btn">Scopri di più</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<section class="newsletter">
+    <h2>Entra nel mondo Re.Gu.Ma</h2>
+    <p>Iscriviti per ricevere aggiornamenti sui nostri nuovi prodotti riciclati.</p>
+    <form action="#">
+        <input type="email" placeholder="Inserisci la tua email" required>
+        <button type="submit" class="btn" style="border:none; cursor:pointer;">Iscriviti Ora</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2024 Re.Gu.Ma design - Startup di Studenti di Palermo.<br>
+    Ogni pezzo è unico e aiuta a pulire il pianeta.</p>
+</footer>
+
+</body>
+</html>
